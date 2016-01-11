@@ -1,5 +1,6 @@
 # Monday 1/11
 
+
 ## AppFunctionality:
 1. User needs to signup
     + dev needs to create server
