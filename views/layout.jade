@@ -1,8 +1,67 @@
-doctype html
 html
   head
-    title= title
+    title
+    script(src='//code.jquery.com/jquery-1.12.0.min.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
-    block content
-    	form 
+    link(rel='text/javascript', href='/javascript/client.js')
+    link(rel='javascript', href='index.js')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', crossorigin='anonymous')
+  body(data-spy='scroll', data-target='ol', data-offset='50')
+    nav#nav.navbar.navbar-inverse.nav.bar-top
+      p#nav.navbar-text.navbar
+        a.navbar-link(href='#')
+      p#fridge.navbar-text.navbar
+        a.navbar-link(href='#') Fridge
+      p#pantry.navbar-text.navbar
+        a.navbar-link(href='#') Pantry
+      p.navbar-text.navbar
+        a.navbar-link(href='#') Log in
+      p.navbar-text.navbar
+        a.navbar-link(href='#') Log out
+
+
+
+
+        div
+      label(for='recipe-q')
+      input#recipe-q(type='text', name='q', value='')
+      input#recipe-q-button(type='button', name='name', value='Search')
+      h3 Recipe Search Results:
+      #q-results.results
+    
+
+
+
+
+
+    nav#navBottom.navbar.navbar-default.navbar-fixed-bottom
+    script.
+      $(document).ready(function() {
+      $("#fridge").hover(function() {
+      $('#fridge').animate({
+      fontSize: '40px'
+      },200)
+      });
+      $("#pantry").hover(function() {
+      $('#pantry').animate({
+      fontSize: '40px'
+      },200)
+      });
+      $('#fridge').mouseleave(function(){
+      $('#fridge').animate({fontSize : 28},150);
+      });
+      $('#pantry').mouseleave(function(){
+      $('#pantry').animate({fontSize : 28},150);
+      });
+      $('btn-primary').hover(function() {
+      $('this').animate()
+      })
+      $("#avo").hover(function() {
+      $('#avo').animate({
+      fontSize: '15px'
+      },200)
+      });
+      $("li").on('click',function() {
+      $(this).css("background-color","#11456E")
+      })
+      });
