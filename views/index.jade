@@ -1,5 +1,61 @@
-extends layout
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='javascript' href='index.js'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body data-spy="scroll" data-target="ol" data-offset="50">
+  <nav id="nav" class="navbar navbar-inverse nav bar-top">
+			<p class="navbar-text navbar" id="nav"> <a href="#" class="navbar-link"></a></p>
+			<p id="fridge" class="navbar-text navbar"> <a href="#" class="navbar-link">Saved</a></p>
+			<p id="pantry" class="navbar-text navbar"> <a href="#" class="navbar-link">Add</a></p>
+			<p class="navbar-text navbar"> <a href="#" class="navbar-link">Log in</a></p>
+			<p class="navbar-text navbar"> <a href="#" class="navbar-link">Log out</a></p>
+		</nav>
 
-block content
-  h1= title
+    </div>
+    <div id="lColOne" class="col-md-2">
+    <div id="scroll-able">
+
+    <nav id="navBottom" class="navbar navbar-default navbar-fixed-bottom">
+  </div>
+  </nav>
+
+    <script>
+    $(document).ready(function() {
+      $("#fridge").hover(function() {
+        $('#fridge').animate({
+            fontSize: '40px'
+          },200)
+        });
+      $("#pantry").hover(function() {
+        $('#pantry').animate({
+            fontSize: '40px'
+          },200)
+        });
+      $('#fridge').mouseleave(function(){
+        $('#fridge').animate({fontSize : 28},150);
+        });
+      $('#pantry').mouseleave(function(){
+        $('#pantry').animate({fontSize : 28},150);
+        });
+      $('btn-primary').hover(function() {
+        $('this').animate()
+      })
+      $("#avo").hover(function() {
+        $('#avo').animate({
+            fontSize: '15px'
+          },200)
+        });
+      $("li").on('click',function() {
+          $(this).css("background-color","#11456E")
+      })
+      });
+
+    </script>
+  </body>
+</html>
   p Welcome to #{title}
