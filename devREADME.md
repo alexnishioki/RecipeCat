@@ -1,11 +1,13 @@
 # Monday 1/11
-big oven api:
-pearson api:
 
+### Api's
 https://spoonacular.com/food-api
 
 ### example Codepen HTML:CSS
 http://codepen.io/arbaoui_mehdi/pen/JfpEm
+
+### pivotal tracker instructional video
+https://www.pivotaltracker.com/help/gettingstarted
 
 ## AppFunctionality:
 Step: 1 read through API's and determine app functionality.
